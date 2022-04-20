@@ -1,0 +1,26 @@
+{
+  "name": "to-do-list",
+  "description": "To Do List",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "sass src/:dist/ --watch --style=compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jurgengjoncari/to-do-list.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jurgengjoncari/to-do-list/issues"
+  },
+  "homepage": "https://github.com/jurgengjoncari/to-do-list#readme",
+  "devDependencies": {
+    "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.8.1",
+    "sass": "^1.50.1"
+  }
+}
