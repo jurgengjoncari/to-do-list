@@ -1,8 +1,23 @@
+@font-face {
+    font-family: "Square Peg";
+    src: url('SquarePeg-Regular.ttf');
+}
+
 $body-bg: black;
 $body-color: white;
+$list-group-bg: inherit;
+$list-group-color: inherit;
+
+li, #text {
+    font-family: "Square Peg";
+}
 
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
 .checked {
     text-decoration: line-through;
+}
+
+to-do-item {
+    // display: list-item;
 }
