@@ -1,8 +1,8 @@
-let textInput = document.querySelector('#text')
+let toDoInput = document.querySelector('#to-do-input')
 
 let toDoList = document.querySelector('#todos')
 
-let addButton = document.querySelector('button.btn-primary')
+let submitToDo = document.querySelector('#submit-to-do')
 
 function createToDoItem() {
     let item = document.createElement('li')
@@ -40,26 +40,21 @@ class ToDoItem extends HTMLElement {
         // deleteButton.classList.add('btn', 'btn-danger')
         // this.appendChild(deleteButton)
 
+        // this.classList.add('d-flex', 'justify-content-between')
+    }
+
+    connectedCallback() {
         this.innerHTML = `
-            <li class='list-group-item form-check d-flex justify-content-between'>
+            <a class='list-group-item form-check d-flex justify-content-between'>
                 <label class="form-check-label" id="item-label">
                     <input type="checkbox" class="form-check-input">
-                    ${textInput.value}
+                    ${toDoInput.value}
                 </label>
-            </li>
+            </a>
         `
         this.addEventListener('click', this.check)
 
-        this.deleteButton.innerHTML = `
-            <button class="btn btn-danger" id="delete">
-                -
-            </button>
-        `
-        this.deleteButton.addEventListener('click', this.delete)
-
-        this.appendChild(this.deleteButton)
-
-        // this.classList.add('d-flex', 'justify-content-between')
+        // let deleteButton = document.createElement('button')
     }
 
     check() {
@@ -73,29 +68,54 @@ class ToDoItem extends HTMLElement {
 
 customElements.define('to-do-item', ToDoItem)
 
-addButton.addEventListener('click', () => {
-    // let toDoItem = document.createElement("to-do-item")
+class DeleteButton extends HTMLElement {
+    constructor() {
+        super()
+    }
 
-    // toDoItem.textContent = textInput.value
-    let toDoItem = document.createElement('li')
+    connectedCallback() {
+        this.innerHTML = `
+            <button class="btn btn-danger" id="delete">
+                -
+            </button>
+        `
+    }
+}
 
-    toDoItem.classList.add('list-group-item', 'form-check', 'd-flex', 'justify-content-between')
+customElements.define('delete-button', DeleteButton)
 
-    toDoItem.innerHTML = `
-        <label class="form-check-label" id="item-label">
-            <input type="checkbox" class="form-check-input">
-            ${textInput.value}
-        </label>
-        <button class="btn btn-danger">
-            -
-        </button>
-    `
+submitToDo.addEventListener('click', () => {
+    let toDoItem = document.createElement("to-do-item")
 
-    toDoItem.addEventListener('click', () => {
+    // toDoItem.textContent = toDoInput.value
 
-    })
+    // let toDoItem = document.createElement('li')
+
+    // toDoItem.classList.add('list-group-item', 'd-flex', 'justify-content-between')
+
+    // toDoItem.innerHTML = `
+    //     <div class="form-check">
+    //         <label class="form-check-label" id="item-label">
+    //             <input type="checkbox" class="form-check-input">
+    //             ${toDoInput.value}
+    //         </label>
+    //     </div>
+    //     <button class="btn btn-danger">
+    //         -
+    //     </button>
+    // `
+
+    // toDoItem.addEventListener('click', () => {
+
+    // })
+
+    let deleteButton = document.createElement('delete-element')
+
+    toDoItem.appendChild(deleteButton)
 
     toDoList.append(toDoItem)
 
-    textInput.value = ''
+    deleteButton.addEventListener('click', () => {toDoList.remove()})
+
+    toDoInput.value = ''
 })
