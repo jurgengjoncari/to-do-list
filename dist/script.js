@@ -4,7 +4,7 @@ let toDoList = document.querySelector('#todos')
 
 let submitToDo = document.querySelector('#submit-to-do')
 
-function createToDoItem() {
+function newToDoItem() {
     let item = document.createElement('li')
 
     item.addEventListener('click', () => {

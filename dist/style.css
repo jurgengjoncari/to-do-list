@@ -1,4 +1,4 @@
-﻿@font-face{font-family:"Square Peg";src:url("SquarePeg-Regular.ttf")}li,#text{font-family:"Square Peg"}/*!
+﻿@import"https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap";@font-face{font-family:"Square Peg";src:url("SquarePeg-Regular.ttf")}li,#to-do-input{font-family:"Indie Flower",cursive}/*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
