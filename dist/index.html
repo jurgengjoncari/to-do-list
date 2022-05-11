@@ -12,23 +12,23 @@
         <h1>To-Do List</h1>
     </header>
     <main>
-        <ul class="list-group list-group-flush container-sm">
-            <li class="list-group-item d-flex justify-content-between">
+        <ul class="container-sm">
+            <li>
                 <label>
                     <input type="checkbox" class="form-check-input me-1">
                     Buy veggies
                 </label>
-                <button class="delete"></button>
+                <button class="delete btn btn-outline-danger"></button>
             </li>
         </ul>
-        <section class="form-text fixed-bottom bg-dark py-2" style="--bs-bg-opacity: 0.94; ">
-            <label for="input" class="form-label">Enter a to-do item</label>
-            <span class="input-group input-group">
-                <input id="input" type="text" class="form-control">
-                <button class="btn btn-primary" id="submit">+</button>
-            </span>
-        </section>
     </main>
+    <section class="form-text bg-dark py-2" style="--bs-bg-opacity: 0.94; ">
+        <label for="input" class="form-label">Enter a to-do item</label>
+        <span class="input-group input-group">
+            <input id="input" type="text" class="form-control">
+            <button class="btn btn-primary" id="submit">+</button>
+        </span>
+    </section>
     <footer>
         <div>Add a to do in the input below</div>
         <div>Created by <a href="https://linkedin.com/in/jurgengjoncari" target="_blank">Jurgen Gjonçari</a></div>
