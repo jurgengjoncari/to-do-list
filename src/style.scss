@@ -15,7 +15,10 @@ li, #to-do-input {
     font-family: 'Indie Flower', cursive;
 }
 
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/utilities";
 
 .checked {
     text-decoration: line-through;
@@ -73,10 +76,10 @@ body {
     grid-template-rows: auto 1fr auto auto;
 }
 
-section {
-    grid-row: 4 / 5;
-}
-
 .delete:after {
     content: 'x';
+}
+
+#checklist, #input-container {
+  max-width: 80ch;
 }
