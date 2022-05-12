@@ -1,4 +1,14 @@
-export default function createItem(todo) {
+export default class checkItem extends HTMLElement {
+    constructor() {
+        
+    }
+
+    setChecked() {
+
+    }
+}
+
+function createItem(todo) {
     const listItem = document.createElement('li')
 
     listItem.innerHTML = `
