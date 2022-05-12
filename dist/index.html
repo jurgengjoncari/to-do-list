@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="min-vh-100">
-    <header class="container-sm">
+    <header class="container">
         <h1>To-Do List</h1>
     </header>
     <main>
-        <ul class="container-sm">
+        <fieldset class="container" id="checklist">
+            <legend>Reminders</legend>
             <li>
                 <label>
                     <input type="checkbox" class="form-check-input me-1">
@@ -20,7 +21,7 @@
                 </label>
                 <button class="delete btn btn-outline-danger"></button>
             </li>
-        </ul>
+        </fieldset>
     </main>
     <section class="form-text bg-dark py-2" style="--bs-bg-opacity: 0.94; ">
         <label for="input" class="form-label">Enter a to-do item</label>

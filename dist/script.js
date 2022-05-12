@@ -1,6 +1,7 @@
 let input = document.querySelector('#input')
+input.focus()
 
-let checklist = document.querySelector('ul')
+let checklist = document.querySelector('#checklist')
 
 let submitButton = document.querySelector('#submit')
 
@@ -26,4 +27,5 @@ submitButton.addEventListener('click', () => {
     console.log(input.value);
 
     input.value = ''
+    input.focus()
 })

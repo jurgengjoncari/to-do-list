@@ -21,40 +21,6 @@ li, #to-do-input {
     text-decoration: line-through;
 }
 
-ul {
-    display: flex;
-    flex-direction: column;
-  
-    // No need to set list-style: none; since .list-group-item is block level
-    padding-left: 0; // reset padding because ul and ol
-    margin-bottom: 0;
-    @include border-radius($list-group-border-radius);
-  }
-  
-  .list-group-numbered {
-    list-style-type: none;
-    counter-reset: section;
-  
-    > li::before {
-      // Increments only this instance of the section counter
-      content: counters(section, ".") ". ";
-      counter-increment: section;
-    }
-  }  
-
-  .list-group-flush {
-    @include border-radius(0);
-  
-    > .list-group-item {
-      border-width: 0 0 $list-group-border-width;
-  
-      &:last-child {
-        border-bottom-width: 0;
-      }
-    }
-  }
-    
-
 li {
     position: relative;
     display: block;
