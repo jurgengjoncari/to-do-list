@@ -1,32 +1,26 @@
-export default class checkItem extends HTMLElement {
-    constructor() {
-        
-    }
-
-    setChecked() {
-
-    }
-}
-
-function createItem(todo) {
+export default function createItem(todo) {
     const listItem = document.createElement('li')
 
+    const id = `id_${Date.now()}`
     listItem.innerHTML = `
-        <label>
-            <input type="checkbox" class="form-check-input me-1">
-        </label>
+        <input type="checkbox" class="form-check-input me-1" id="${id}">
+        <label for="${id}"></label>
         <button class="delete btn btn-outline-danger"></button>
     `;
 
-    listItem.querySelector("label").insertAdjacentText('beforeend', todo)
-    listItem.querySelector(".delete").onclick = () => listItem.remove()
+    const input = listItem.querySelector("input")
+    const label = listItem.querySelector("label")
+    const deleteButton = listItem.querySelector(".delete")
 
-    let completed = false;
+    input.addEventListener("click", () => {
+        label.classList.toggle("checked")
+    })
+    label.insertAdjacentText('beforeend', todo)
+    deleteButton.onclick = () => listItem.remove()
 
+    // if (input.classList.contains("checked")) {
+    //     label.style.textDecoration = "line-through"
+    // }
 
     return listItem
-}
-
-function setChecked() {
-    
 }
