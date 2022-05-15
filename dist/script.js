@@ -1,15 +1,13 @@
 import createItem from './check-item.js'; 
 
-let input = document.querySelector('#input')
+let input = document.querySelector('[data-input]')
 input.focus()
 
-let checklist = document.querySelector('#checklist')
+let checklist = document.querySelector('[data-checklist]')
 
-let submitButton = document.querySelector('#submit')
-
+let submitButton = document.querySelector('[data-submit]')
 
 submitButton.addEventListener('click', () => {
-
     checklist.append(createItem(input.value))
     console.log(input.value);
 
