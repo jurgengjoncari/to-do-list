@@ -4,10 +4,8 @@ export default function createItem(todo) {
     const id = `id_${Date.now()}`
     
     listItem.innerHTML = `
-        <span>
-            <input type="checkbox" class="form-check-input me-1" id="${id}">
-            <label for="${id}"></label>
-        </span>
+        <input type="checkbox" class="form-check-input me-1" id="${id}">
+        <label for="${id}"></label>
         <button class="delete btn btn-outline-danger"></button>
     `;
 

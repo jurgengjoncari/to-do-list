@@ -1,18 +1,20 @@
-// import createItem from './components/check-item.js'; 
-import CheckItem from './components/checklist-item-class.js'
+import createItem from './components/check-item.js'; 
+// import CheckItem from './components/checklist-item-class.js'
 
-customElements.define('check-item', CheckItem)
+// customElements.define('check-item', CheckItem)
 
-let input = document.querySelector('[data-input]')
+const input = document.querySelector('[data-input]')
 input.focus()
 
-let checklist = document.querySelector('[data-checklist]')
+const checklist = document.querySelector('[data-checklist]')
+
+const submitButton = document.querySelector('[data-submit]')
 
 submitButton.addEventListener('click', () => {
-    const checkItem = new CheckItem(input.value)
-    console.log(checkItem);
+    // const checkItem = new CheckItem(input.value)
+    // console.log(checkItem);
     
-    checklist.append(checkItem)
+    checklist.append(createItem(input.value))
     console.log(input.value);
 
     input.value = ''
