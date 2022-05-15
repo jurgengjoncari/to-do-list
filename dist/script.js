@@ -1,4 +1,4 @@
-import createItem from './components/check-item.js'; 
+// import createItem from './components/check-item.js'; 
 import CheckItem from './components/checklist-item-class.js'
 
 customElements.define('check-item', CheckItem)
