@@ -13,9 +13,6 @@ export default function createItem(todo) {
     const label = listItem.querySelector("label")
     const deleteButton = listItem.querySelector(".delete")
 
-    checkbox.addEventListener("click", () => {
-        label.classList.toggle("checked")
-    })
     label.insertAdjacentText('beforeend', todo)
     deleteButton.onclick = () => listItem.remove()
 
