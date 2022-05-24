@@ -11,15 +11,7 @@ $list-group-bg: inherit;
 $list-group-color: inherit;
 $form-check-input-border: 1px solid rgba(white, .75);
 
-li, #to-do-input {
-    font-family: 'Indie Flower', cursive;
-}
-
 @import "../node_modules/bootstrap/scss/bootstrap-reboot.scss";
-
-.checked {
-    text-decoration: line-through;
-}
 
 li {
     position: relative;
@@ -63,20 +55,8 @@ li {
     }
   }
 
-li {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-}
-
 body {
     display: grid;
     grid-template-rows: auto 1fr auto auto;
 }
 
-.delete:after {
-    content: 'x';
-}
-
-#checklist, #input-container {
-  max-width: 80ch;
-}
