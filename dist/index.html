@@ -15,26 +15,7 @@
         <fieldset class="container" id="checklist" data-checklist>
             <legend>Reminders</legend>
             <template id="check-item">
-                <style>
-                    :host {
-                        max-width: 80ch;
-                        display: grid;
-                        grid-template-columns: auto 1fr auto;
-                    }
-
-                    label {
-                        font-family: 'Indie Flower', cursive;
-                    }
-
-                    .checked {
-                        text-decoration: line-through;
-                    }
-
-                    [data-delete]:after {
-                        content: 'x';
-                    }
-                </style>
-
+                <link rel="stylesheet" href="./check-item-class/check-item.css">
                 <input type="checkbox" class="form-check-input me-1">
                 <label></label>
                 <button class="btn btn-outline-danger" data-delete></button>
@@ -57,6 +38,6 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- <script src="./script.js" type="module"></script> -->
-    <script src="./script-class.js" type="module"></script>
+    <script src="./check-item-class/script.js" type="module"></script>
 </body>
 </html>

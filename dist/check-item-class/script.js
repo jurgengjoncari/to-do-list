@@ -1,4 +1,4 @@
-import CheckItem from './components/check-item-class.js'
+import CheckItem from './check-item-class.js'
 
 customElements.define('check-item', CheckItem)
 

@@ -1,4 +1,4 @@
-import createItem from './components/check-item.js'; 
+import createItem from './check-item.js'; 
 
 const input = document.querySelector('[data-input]')
 input.focus()
