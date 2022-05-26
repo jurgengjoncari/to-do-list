@@ -17,9 +17,10 @@
             <template id="check-item">
                 <link rel="stylesheet" href="./check-item-class/check-item.css">
                 <input type="checkbox" class="form-check-input me-1">
-                <label></label>
+                <label><slot name="description"></slot></label>
                 <button class="btn btn-outline-danger" data-delete></button>
             </template>
+            <check-item><span slot="description">Hello</span></check-item>
         </fieldset>
     </main>
     <section class="form-text bg-dark py-2" style="--bs-bg-opacity: 0.94; ">
@@ -27,7 +28,7 @@
             Enter a to-do item
             <span class="input-group">
                 <input id="input" type="text" class="form-control" data-input>
-                <button class="btn btn-primary" id="submit" data-submit>+</button>
+                <button class="btn btn-primary" id="submit" data-submit>&plus;</button>
             </span>
         </label>
     </section>

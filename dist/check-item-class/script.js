@@ -15,7 +15,17 @@ submitButton.addEventListener('click', () => {
     input.focus()
 })
 
-checklist.append(new CheckItem("Buy veggies"))
-checklist.append(new CheckItem("Go to gym"))
-checklist.append(new CheckItem("Fix my bike"))
-checklist.append(new CheckItem("Buy paining supplies"))
+// Add some data manually
+const items = [
+    "Buy veggies",
+    "Go to gym",
+    "Fix my bike",
+    "Buy painting supplies"
+]
+
+for (let item of items) {
+    let checkItem = new CheckItem(item)
+    checkItem.addDescription()
+    checklist.append(checkItem)
+}
+
