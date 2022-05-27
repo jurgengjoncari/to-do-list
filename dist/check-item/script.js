@@ -1,16 +1,30 @@
-import createItem from './check-item.js'; 
+export default class CheckItem extends HTMLElement {
+    constructor() {
+        // @ts-ignore
+        super().attachShadow({mode: 'open'})
+        const itemTemplate = document.querySelector('#check-item')
+        // @ts-ignore
+        this.shadowRoot.append(itemTemplate.content.cloneNode(true));
 
-const input = document.querySelector('[data-input]')
-input.focus()
+        // Update the HTML template and add events
+        const checkBox = this.shadowRoot.querySelector(`[type=checkbox]`)
+        const label = this.shadowRoot.querySelector("label")
+        const deleteButton = this.shadowRoot.querySelector("[data-delete]")
 
-const checklist = document.querySelector('[data-checklist]')
+        checkBox.addEventListener("click", () => label.classList.toggle("checked"))
+        deleteButton.addEventListener("click", () => this.remove())
 
-const submitButton = document.querySelector('[data-submit]')
+        // Insert Ids to checkbox and label
+        const id = `id_${Date.now()}`
 
-submitButton.addEventListener('click', () => {
-    checklist.append(createItem(input.value))
-    console.log(input.value);
+        checkBox.id = id
+        label.setAttribute('for', id)
 
-    input.value = ''
-    input.focus()
-})
+        // Store description in a span with slot
+    }
+
+    addDescription(description) {
+        const span = `<span slot='description'>${description}<span>`
+        this.insertAdjacentHTML('beforeend', span)
+    }
+}
