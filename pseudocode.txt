@@ -1,3 +1,7 @@
 Add a to-do item to the list
+The item must have a checkbox, a description, and a delete button. 
+The list shouldn't be wider than 80ch. 
+
 When I click the checkbox, the to-do item is striked through
-Every to-do item has a delete button
+When I click the delete button, the item should be removed from the list. 
+

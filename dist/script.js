@@ -22,10 +22,10 @@ const items = [
 
 items.forEach((item) => insertCheckItem(item))
 
-function insertCheckItem(item) {
+function insertCheckItem(description) {
     // @ts-ignore
     let checkItem = new CheckItem
-    checkItem.setDescription(item)
+    checkItem.setDescription(description)
 
     checklist.append(checkItem)    
 

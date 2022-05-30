@@ -11,21 +11,21 @@ export default class CheckItem extends HTMLElement {
         this.label = this.shadowRoot.querySelector("label")
         this.deleteButton = this.shadowRoot.querySelector("[data-delete]")
 
-        this.setID()
+        this.setId()
 
         // Make it interactive
-        this.checkBox.addEventListener("click", () => this.handleClick())
+        this.checkBox.addEventListener("click", () => this.handleCheck())
         this.deleteButton.addEventListener("click", () => this.handleDelete())
     }
 
-    setID() {
-        const id = `id_${Date.now()}`
+    setId() {
+        const ID = `id_${Date.now()}`
 
-        this.checkBox.id = id
-        this.label.setAttribute('for', id)
+        this.checkBox.id = ID
+        this.label.setAttribute('for', ID)
     }
 
-    handleClick() {
+    handleCheck() {
         this.label.classList.toggle("checked")
     }
 
