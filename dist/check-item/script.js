@@ -23,8 +23,8 @@ export default class CheckItem extends HTMLElement {
         // Store description in a span with slot
     }
 
-    addDescription(description) {
-        const span = `<span slot='description'>${description}<span>`
+    set description(desc) {
+        const span = `<span slot='description'>${desc}<span>`
         this.insertAdjacentHTML('beforeend', span)
     }
 }

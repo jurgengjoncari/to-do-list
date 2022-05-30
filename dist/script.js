@@ -25,7 +25,7 @@ items.forEach((item) => insertCheckItem(item))
 function insertCheckItem(item) {
     // @ts-ignore
     let checkItem = new CheckItem
-    checkItem.addDescription(item)
+    checkItem.description = item
 
     checklist.append(checkItem)    
 
