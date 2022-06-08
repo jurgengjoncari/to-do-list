@@ -1,7 +1,40 @@
-Add a to-do item to the list
-The item must have a checkbox, a description, and a delete button. 
-The list shouldn't be wider than 80ch. 
+To do items are grouped in lists. Each list has a title. 
 
-When I click the checkbox, the to-do item is striked through
-When I click the delete button, the item should be removed from the list. 
+The app has three main views: 
+    - The list views
+    - the main views
+    - the details views
 
+Layout:
+    - At the top of the main section is the title of the chosen list
+    - I'm able to add a new item from the bottom
+    - In desktop interface 
+        - these views appear from left to right, with the sides of equal widths
+        - the main view:
+            - is in golden ratio raport with the other two
+            - is not wider than 80 characters
+        - when the sides become smaller than mobile width, changes to mobile view
+    - In mobile interface:
+        - by default the main view is visible
+        - When I click on the title on top, a list with the titles appears
+        - When I click on the details of an item, a dialog with the details appears on top.
+
+The list view:
+    - There's always a list by default which is titled "Reminders". 
+    - Here I should be able to add, delete or modify their title. 
+    - If I try to delete a list which is not empty, I should get a warning. 
+    - When I click on a list, in the main section I see its items. 
+
+The main view:
+    - Has a toggle where I hide the completed items
+    - Every item has a checkbox, a description, a delete button and a details button. 
+    - I'ts also possible to create nested items. These don't have a details view. 
+    - When I tick a checkbox, the item is striked through. 
+    - If I tick the checkboxes of all sub-items, the item itself is ticked. And vice-versa. 
+
+The details pane is like a form:
+    - it contains a due date and time with date and time picker
+    - it contains an input for the title and description / notes
+    - the inputs are modifiable
+    - optionally I can add a location and image
+    - for the mobile interface, this form appears as a dialog
