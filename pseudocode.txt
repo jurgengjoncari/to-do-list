@@ -17,7 +17,7 @@ Layout:
     - In mobile interface:
         - by default the main view is visible
         - When I click on the title on top, a list with the titles appears
-        - When I click on the details of an item, a dialog with the details appears on top.
+        - When I click on the details of an item, a form with the details appears.
 
 The list view:
     - There's always a list by default which is titled "Reminders". 
