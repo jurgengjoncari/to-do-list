@@ -14,7 +14,22 @@ $form-check-input-border: 1px solid rgba(white, .75);
 // @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 body {
+    min-height: 100vh;
+    margin: 0;
     display: grid;
-    grid-template-rows: auto 1fr auto auto;
+    grid-template-rows: auto auto 1fr auto;
 }
 
+section {
+    grid-row: 4 / 5;
+    justify-self: center;
+}
+
+fieldset {
+    max-width: 80ch;
+    margin: auto;
+}
+
+footer {
+    justify-self: center;
+}

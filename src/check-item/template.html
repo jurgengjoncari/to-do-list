@@ -1,5 +1,23 @@
 <template data-check-item>
-    <link rel="stylesheet" href="./check-item/style.css" type="text/css">
+    <style>
+        :host {
+            max-width: 80ch;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+        }
+
+        label {
+            font-family: 'Indie Flower', 'Comic Sans', cursive;
+        }
+
+        .checked {
+            text-decoration: line-through;
+        }
+
+        [data-delete]:after {
+            content: 'x';
+        }
+    </style>
     <input type="checkbox" class="form-check-input me-1">
     <label>
         <slot name="description"></slot>
