@@ -1,8 +1,14 @@
+const response = await fetch('../src/check-item/template.html')
+const txt = await response.text()
+const parsed = new DOMParser().parseFromString(txt, 'text/html')
+const itemTemplate = parsed.querySelector('[data-check-item]')
+console.log(itemTemplate);
+
 export default class CheckItem extends HTMLElement {
     constructor() {
         // @ts-ignore
-        super().attachShadow({mode: 'open'})
-        const itemTemplate = document.querySelector('template[data-check-item]')
+        super().attachShadow({ mode: 'open' })
+        // const itemTemplate = document.querySelector('template[data-check-item]')
         // @ts-ignore
         this.shadowRoot.append(itemTemplate.content.cloneNode(true));
 

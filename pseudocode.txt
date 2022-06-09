@@ -1,7 +1,7 @@
 To do items are grouped in lists. Each list has a title. 
 
 The app has three main views: 
-    - The list views
+    - The grouped views
     - the main views
     - the details views
 
@@ -19,22 +19,35 @@ Layout:
         - When I click on the title on top, a list with the titles appears
         - When I click on the details of an item, a form with the details appears.
 
-The list view:
+The grouped view:
     - There's always a list by default which is titled "Reminders". 
     - Here I should be able to add, delete or modify their title. 
     - If I try to delete a list which is not empty, I should get a warning. 
     - When I click on a list, in the main section I see its items. 
 
 The main view:
-    - Has a toggle where I hide the completed items
+    Is the list of todos of a selected group. 
     - Every item has a checkbox, a description, a delete button and a details button. 
-    - I'ts also possible to create nested items. These don't have a details view. 
+    - I should be able to add an item by entering the description in the field at the bottom. 
     - When I tick a checkbox, the item is striked through. 
+    - When I double-click/tap an item, it enters in edit mode
+    - It's also possible to create nested items. These don't have a details view. 
     - If I tick the checkboxes of all sub-items, the item itself is ticked. And vice-versa. 
+    - Maybe on the bottom of the list appears the footer. 
+    - Has a toggle where I hide the completed items, maybe on the top
+    - I'm able to order by priority, and group by time, etc. 
 
 The details pane is like a form:
     - it contains a due date and time with date and time picker
-    - it contains an input for the title and description / notes
+    - it contains a text input for description / notes
     - the inputs are modifiable
     - optionally I can add a location and image
     - for the mobile interface, this form appears as a dialog
+    - There's a confirm / save button there. 
+
+
+NOTES
+
+We have todos that don't need a time such as items to pack, shopping items etc. 
+Then we have items that do need a time, such as fixing something or creating an appointment. 
+The second case seems more like an event you'd put in the calendar. 

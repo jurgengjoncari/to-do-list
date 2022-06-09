@@ -1,17 +1,37 @@
-[
-    {
-        "title": "Create the logic"
+{
+    "reminders": {
+        "fix the bike": {
+            "due date": "10/06/2022",
+            "due time": "18:30",
+            "priority": "medium",
+            "sub-items": []
+        }
     },
-    {
-        "title": "Decide on the UX"
-    },
-    {
-        "title": "Create the UI"
-    },
-    {
-        "title": "Create only one level of checkboxes"
-    },
-    {
-        "title": "Add the function to save to local storage"
+    "gym exercises": {},
+    "grocery shopping": {},
+    "trip packing": {
+        "clothes": {
+            "sub-items": [
+                "shoes",
+                "shirt",
+                "pants"
+            ]
+        },
+        "toiletries": {
+            "sub-items": [
+                "Toothbrush",
+                "Sunscreen",
+                "Deodorant"
+            ]
+        },
+        "miscellaneous": {
+            "sub-items": [
+                "Phone",
+                "Charger",
+                "Laptop",
+                "Tissues",
+                "Snacks"
+            ]
+        }
     }
-]
+}
