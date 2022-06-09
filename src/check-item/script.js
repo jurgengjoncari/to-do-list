@@ -8,8 +8,6 @@ export default class CheckItem extends HTMLElement {
     constructor() {
         // @ts-ignore
         super().attachShadow({ mode: 'open' })
-        // const itemTemplate = document.querySelector('template[data-check-item]')
-        // @ts-ignore
         this.shadowRoot.append(itemTemplate.content.cloneNode(true));
 
         // Register properties
