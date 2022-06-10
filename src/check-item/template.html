@@ -1,26 +1,37 @@
-<template data-check-item>
-    <style>
-        :host {
-            max-width: 80ch;
-            display: grid;
-            grid-template-columns: auto 1fr auto;
-        }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check-list Item Template</title>
+</head>
+<body>
+    <template data-check-item>
+        <style>
+            :host {
+                max-width: 80ch;
+                display: grid;
+                grid-template-columns: auto 1fr auto;
+            }
 
-        label {
-            font-family: 'Indie Flower', 'Comic Sans', cursive;
-        }
+            label {
+                font-family: 'Indie Flower', 'Comic Sans', cursive;
+            }
 
-        .checked {
-            text-decoration: line-through;
-        }
+            .checked {
+                text-decoration: line-through;
+            }
 
-        [data-delete]:after {
-            content: 'x';
-        }
-    </style>
-    <input type="checkbox" class="form-check-input me-1">
-    <label>
-        <slot name="description"></slot>
-    </label>
-    <button class="btn btn-outline-danger" data-delete></button>
-</template>
+            [data-delete]:after {
+                content: 'x';
+            }
+        </style>
+        <input type="checkbox" class="form-check-input me-1">
+        <label>
+            <slot name="description"></slot>
+        </label>
+        <button class="btn btn-outline-danger" data-delete></button>
+    </template>    
+</body>
+</html>

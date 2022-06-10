@@ -16,6 +16,7 @@
         <fieldset class="container" id="checklist" data-checklist>
             <legend>Reminders</legend>
             <check-item><span slot="description">Hello</span></check-item>
+            <check-item><span slot="description">Buy the salad</span></check-item>
         </fieldset>
     </main>
     <footer>
@@ -25,11 +26,11 @@
     <section class="form-text bg-dark py-2" style="--bs-bg-opacity: 0.94; ">
         <label id="input-container" for="input" class="form-label">
             Enter a to-do item
-            <span class="input-group">
-                <input id="input" type="text" class="form-control" data-input>
-                <button class="btn btn-primary" id="submit" data-submit>&plus;</button>
-            </span>
         </label>
+        <span class="input-group">
+            <input id="input" type="text" class="form-control" data-input>
+            <button class="btn btn-primary" id="submit" data-submit>&plus;</button>
+        </span>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="./main.js" type="module"></script>

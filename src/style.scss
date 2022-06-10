@@ -21,8 +21,15 @@ body {
 }
 
 section {
-    grid-row: 4 / 5;
     justify-self: center;
+    position: sticky;
+    bottom: 0;
+    max-width: 80ch;
+    display: grid;
+}
+
+span {
+    display: flex;
 }
 
 fieldset {
