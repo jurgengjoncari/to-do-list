@@ -1,5 +1,7 @@
+import listItemAction from './li-action/script.js'
 import CheckItem from './check-item/script.js'
 
+customElements.define('li-action', listItemAction)
 customElements.define('check-item', CheckItem)
 
 const input = document.querySelector('[data-input]')

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Item with Actions Template</title>
+</head>
+<body>
+    <template data-item-action>
+        <style>
+            :host {
+                display: grid;
+                grid-template-columns: 1fr auto;
+            }
+
+            [data-delete]:after {
+                content: 'x';
+            }
+        </style>
+        <label>
+            <slot name="description"></slot>
+        </label>
+        <span class="actions">
+            <button data-edit>edit</button>
+            <button class="btn btn-outline-danger" data-delete></button>
+        </span>
+    </template>    
+</body>
+</html>
