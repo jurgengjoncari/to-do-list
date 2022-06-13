@@ -10,18 +10,25 @@
     <template data-item-action>
         <style>
             :host {
+                min-height: 44px;
+                
                 display: grid;
-                grid-template-columns: 1fr auto;
+                grid-template-columns: auto 1fr auto;
             }
 
             [data-delete]:after {
                 content: 'x';
             }
+
+            .checked {
+                text-decoration: line-through;
+            }
         </style>
+        <span data-actions-start></span>
         <label>
             <slot name="description"></slot>
         </label>
-        <span class="actions">
+        <span data-actions-end>
             <button data-edit>edit</button>
             <button class="btn btn-outline-danger" data-delete></button>
         </span>
