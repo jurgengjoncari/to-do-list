@@ -5,6 +5,15 @@ The app has three main views:
     - the main views
     - the details views
 
+Functionality:
+    - I have a list of todos
+    - I should be able to toggle them as completed
+    - I should be able to delete and edit them
+    - I should be able to add more details to them such as time, notes, etc. 
+    - I should be able to have them grouped. 
+    - I should be able to delete and edit groups. 
+        - When I try to delete a group that is not empty, I should get a warning. 
+
 Layout:
     - At the top of the main section is the title of the chosen list
     - I'm able to add a new item from the bottom
