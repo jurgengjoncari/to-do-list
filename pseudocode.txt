@@ -7,11 +7,11 @@ The app has three main views:
 
 Functionality:
     - I have a list of todos
-    - I should be able to toggle them as completed
-    - I should be able to delete and edit them
-    - I should be able to add more details to them such as time, notes, etc. 
+        - I should be able to toggle them as completed
+        - I should be able to delete and edit them
+        - I should be able to add more details to them such as time, notes, etc. 
     - I should be able to have them grouped. 
-    - I should be able to delete and edit groups. 
+        - I should be able to delete and edit groups. 
         - When I try to delete a group that is not empty, I should get a warning. 
 
 Layout:
